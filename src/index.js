@@ -50,6 +50,7 @@ class QRCode extends React.Component {
     level: PropTypes.oneOf(['L', 'M', 'Q', 'H']),
     bgColor: PropTypes.string,
     fgColor: PropTypes.string,
+    className: PropTypes.string,
   };
 
   shouldComponentUpdate(nextProps: Props) {
@@ -112,6 +113,7 @@ class QRCode extends React.Component {
   render() {
     return (
       <canvas
+        className={this.props.className}
         style={{height: this.props.size, width: this.props.size}}
         height={this.props.size}
         width={this.props.size}
