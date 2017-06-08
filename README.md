@@ -13,7 +13,7 @@ npm i -S https://github.com/nicholaspsmith/qrcode.react
 
 ```js
 import React from 'react'
-import QRCode from 'qr-code-react'
+import QRCode from 'react-qr-component'
 
 React.render(
   <QRCode value="http://facebook.github.io/react/" />,
