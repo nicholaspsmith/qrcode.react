@@ -28,6 +28,7 @@ function getBackingStorePixelRatio(ctx: CanvasRenderingContext2D): number {
 type Props = {
   value: string,
   size: number,
+  padding: number,
   level: $Keys<typeof ErrorCorrectLevel>,
   bgColor: string,
   fgColor: string,
@@ -40,6 +41,7 @@ class QRCode extends React.Component {
 
   static defaultProps = {
     size: 128,
+    padding: 5,
     level: 'L',
     bgColor: '#FFFFFF',
     fgColor: '#000000',
@@ -49,6 +51,7 @@ class QRCode extends React.Component {
   static propTypes = {
     value: PropTypes.string.isRequired,
     size: PropTypes.number,
+    padding: PropTypes.number,
     level: PropTypes.oneOf(['L', 'M', 'Q', 'H']),
     bgColor: PropTypes.string,
     fgColor: PropTypes.string,
@@ -70,7 +73,7 @@ class QRCode extends React.Component {
   }
 
   update() {
-    var {value, size, level, bgColor, fgColor} = this.props;
+    var {value, size, level, bgColor, fgColor, padding} = this.props;
 
     // We'll use type===-1 to force QRCode to automatically pick the best type
     var qrcode = new QRCodeImpl(-1, ErrorCorrectLevel[level]);
@@ -116,7 +119,7 @@ class QRCode extends React.Component {
     return (
       <canvas
         className={this.props.className}
-        style={{height: this.props.size, width: this.props.size}}
+        style={{height: this.props.size, width: this.props.size, padding: this.props.padding}}
         height={this.props.size}
         width={this.props.size}
         ref={(ref: ?HTMLCanvasElement): ?HTMLCanvasElement =>
