@@ -31,6 +31,7 @@ type Props = {
   level: $Keys<typeof ErrorCorrectLevel>,
   bgColor: string,
   fgColor: string,
+  className: string,
 };
 
 class QRCode extends React.Component {
