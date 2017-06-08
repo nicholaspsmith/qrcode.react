@@ -5,7 +5,7 @@ A React component to generate [QR codes](http://en.wikipedia.org/wiki/QR_code).
 ## Installation
 
 ```sh
-npm install qrcode.react
+npm i -S https://github.com/nicholaspsmith/qrcode.react
 ```
 
 ## Usage
@@ -29,6 +29,7 @@ prop      | type                 | default value
 `bgColor` | `string` (CSS color) | `"#FFFFFF"`
 `fgColor` | `string` (CSS color) | `"#000000"`
 `level`   | `string` (`'L' 'M' 'Q' 'H'`)            | `'L'`
+`className`|`string`             | ``
 
 <img src="qrcode.png" height="256" width="256">
 
