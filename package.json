@@ -1,5 +1,5 @@
 {
-  "name": "qrcode.react",
+  "name": "qr-code-react",
   "version": "0.7.1",
   "description": "React component to generate QR codes",
   "keywords": [

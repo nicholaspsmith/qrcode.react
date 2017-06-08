@@ -43,6 +43,7 @@ class QRCode extends React.Component {
     level: 'L',
     bgColor: '#FFFFFF',
     fgColor: '#000000',
+    className: '',
   };
 
   static propTypes = {

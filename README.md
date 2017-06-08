@@ -1,6 +1,7 @@
 # qrcode.react
 
 A React component to generate [QR codes](http://en.wikipedia.org/wiki/QR_code).
+forked from [zpao/qrcode.react](https://github.com/zpao/qrcode.react)
 
 ## Installation
 
@@ -11,8 +12,8 @@ npm i -S https://github.com/nicholaspsmith/qrcode.react
 ## Usage
 
 ```js
-var React = require('react');
-var QRCode = require('qrcode.react');
+import React from 'react'
+import QRCode from 'qr-code-react'
 
 React.render(
   <QRCode value="http://facebook.github.io/react/" />,
